@@ -375,8 +375,7 @@ unsigned MP3StreamState::readFromStream(unsigned char* buf,
     unsigned totBytesRead = 0;
     do {
       waitUntilSocketIsReadable(fEnv, sock);
-      int bytesRead
-	= recv(sock, &((char*)buf)[totBytesRead], numChars-totBytesRead, 0);
+      int bytesRead= recv(sock, &((char*)buf)[totBytesRead], numChars-totBytesRead, 0);
       if (bytesRead < 0) return 0;
 
       totBytesRead += (unsigned)bytesRead;

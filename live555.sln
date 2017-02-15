@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UsageEnvironment", "UsageEn
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mediaServer", "mediaServer\mediaServer.vcxproj", "{7E045E50-D67A-4A25-AFFA-2F343D2FFF36}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testRTSPClient", "testRTSPClient\testRTSPClient.vcxproj", "{8313D6B2-CCE2-4229-9247-AF54E32119B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{7E045E50-D67A-4A25-AFFA-2F343D2FFF36}.Release|x64.Build.0 = Release|x64
 		{7E045E50-D67A-4A25-AFFA-2F343D2FFF36}.Release|x86.ActiveCfg = Release|Win32
 		{7E045E50-D67A-4A25-AFFA-2F343D2FFF36}.Release|x86.Build.0 = Release|Win32
+		{8313D6B2-CCE2-4229-9247-AF54E32119B8}.Debug|x64.ActiveCfg = Debug|x64
+		{8313D6B2-CCE2-4229-9247-AF54E32119B8}.Debug|x64.Build.0 = Debug|x64
+		{8313D6B2-CCE2-4229-9247-AF54E32119B8}.Debug|x86.ActiveCfg = Debug|Win32
+		{8313D6B2-CCE2-4229-9247-AF54E32119B8}.Debug|x86.Build.0 = Debug|Win32
+		{8313D6B2-CCE2-4229-9247-AF54E32119B8}.Release|x64.ActiveCfg = Release|x64
+		{8313D6B2-CCE2-4229-9247-AF54E32119B8}.Release|x64.Build.0 = Release|x64
+		{8313D6B2-CCE2-4229-9247-AF54E32119B8}.Release|x86.ActiveCfg = Release|Win32
+		{8313D6B2-CCE2-4229-9247-AF54E32119B8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

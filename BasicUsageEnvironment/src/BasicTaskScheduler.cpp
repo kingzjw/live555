@@ -64,10 +64,12 @@ void BasicTaskScheduler::schedulerTickTask() {
 #endif
 
 void BasicTaskScheduler::SingleStep(unsigned maxDelayTime) {
-  fd_set readSet = fReadSet; // make a copy for this select() call
-  fd_set writeSet = fWriteSet; // ditto
+  //fd_set 是socket 的一个数组的结构体
+  fd_set readSet = fReadSet;   // 保存select 返回的的socket   make a copy for this select() call
+  fd_set writeSet = fWriteSet; // ditto（同上）
   fd_set exceptionSet = fExceptionSet; // ditto
 
+  //间隔时间的延迟
   DelayInterval const& timeToDelay = fDelayQueue.timeToNextAlarm();
   struct timeval tv_timeToDelay;
   tv_timeToDelay.tv_sec = timeToDelay.seconds();
@@ -80,13 +82,14 @@ void BasicTaskScheduler::SingleStep(unsigned maxDelayTime) {
   }
   // Also check our "maxDelayTime" parameter (if it's > 0):
   if (maxDelayTime > 0 &&
-      (tv_timeToDelay.tv_sec > (long)maxDelayTime/MILLION ||
-       (tv_timeToDelay.tv_sec == (long)maxDelayTime/MILLION &&
+	  (tv_timeToDelay.tv_sec > (long)maxDelayTime/MILLION ||
+	  (tv_timeToDelay.tv_sec == (long)maxDelayTime/MILLION &&
 	tv_timeToDelay.tv_usec > (long)maxDelayTime%MILLION))) {
     tv_timeToDelay.tv_sec = maxDelayTime/MILLION;
     tv_timeToDelay.tv_usec = maxDelayTime%MILLION;
   }
 
+  
   int selectResult = select(fMaxNumSockets, &readSet, &writeSet, &exceptionSet, &tv_timeToDelay);
   if (selectResult < 0) {
 #if defined(__WIN32__) || defined(_WIN32)
@@ -132,6 +135,7 @@ void BasicTaskScheduler::SingleStep(unsigned maxDelayTime) {
   // To ensure forward progress through the handlers, begin past the last
   // socket number that we handled:
   if (fLastHandledSocketNum >= 0) {
+
     while ((handler = iter.next()) != NULL) {
       if (handler->socketNum == fLastHandledSocketNum) break;
     }
@@ -143,9 +147,12 @@ void BasicTaskScheduler::SingleStep(unsigned maxDelayTime) {
   while ((handler = iter.next()) != NULL) {
     int sock = handler->socketNum; // alias
     int resultConditionSet = 0;
-    if (FD_ISSET(sock, &readSet) && FD_ISSET(sock, &fReadSet)/*sanity check*/) resultConditionSet |= SOCKET_READABLE;
-    if (FD_ISSET(sock, &writeSet) && FD_ISSET(sock, &fWriteSet)/*sanity check*/) resultConditionSet |= SOCKET_WRITABLE;
-    if (FD_ISSET(sock, &exceptionSet) && FD_ISSET(sock, &fExceptionSet)/*sanity check*/) resultConditionSet |= SOCKET_EXCEPTION;
+    if (FD_ISSET(sock, &readSet) && FD_ISSET(sock, &fReadSet)/*sanity check*/) 
+		resultConditionSet |= SOCKET_READABLE;
+    if (FD_ISSET(sock, &writeSet) && FD_ISSET(sock, &fWriteSet)/*sanity check*/) 
+		resultConditionSet |= SOCKET_WRITABLE;
+    if (FD_ISSET(sock, &exceptionSet) && FD_ISSET(sock, &fExceptionSet)/*sanity check*/) 
+		resultConditionSet |= SOCKET_EXCEPTION;
     if ((resultConditionSet&handler->conditionSet) != 0 && handler->handlerProc != NULL) {
       fLastHandledSocketNum = sock;
           // Note: we set "fLastHandledSocketNum" before calling the handler,

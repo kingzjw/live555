@@ -1,32 +1,9 @@
-﻿  NetInterface.cpp
+﻿  GroupEId.cpp
+  正在生成代码...
+  正在跳过...(未检测到相关更改)
+  NetInterface.cpp
   NetAddress.cpp
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\netaddress.cpp(108): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-  c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2238): note: 参见“gethostbyname”的声明
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\netaddress.cpp(307): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
   IOHandlers.cpp
   GroupsockHelper.cpp
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsockhelper.cpp(150): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsockhelper.cpp(263): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsockhelper.cpp(350): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsockhelper.cpp(697): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsockhelper.cpp(734): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(475): note: 参见“ctime”的声明
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsockhelper.cpp(736): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsockhelper.cpp(786): warning C4244: “=”: 从“time_t”转换到“long”，可能丢失数据
   Groupsock.cpp
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsock.cpp(545): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\groupsock.cpp(557): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
-  GroupEId.cpp
-  正在生成代码...
-  inet.c
-c:\users\king\desktop\graduation design\code\live555_zjw\groupsock\src\inet.c(18): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-  c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1850): note: 参见“inet_addr”的声明
   groupsock.vcxproj -> C:\Users\king\Desktop\graduation Design\code\live555_zjw\Debug\groupsock.lib
