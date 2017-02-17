@@ -307,7 +307,8 @@ char* ServerMediaSession::generateSDPDescription() {
       if (sdpLength <= 1) break; // the SDP has somehow become too long
 
       char const* sdpLines = subsession->sdpLines();
-      if (sdpLines != NULL) snprintf(mediaSDP, sdpLength, "%s", sdpLines);
+      if (sdpLines != NULL) 
+		  snprintf(mediaSDP, sdpLength, "%s", sdpLines);
     }
   } while (0);
 

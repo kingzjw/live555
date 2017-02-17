@@ -66,7 +66,7 @@ void usage(UsageEnvironment& env, char const* progName) {
 	env << "\t(where each <rtsp-url-i> is a \"rtsp://\" URL)\n";
 }
 
-char eventLoopWatchVariable = 0;
+char eventLoopWatchVariable = 0;     
 
 int main(int argc, char** argv) {
 	// Begin by setting up our usage environment:
@@ -192,7 +192,7 @@ void openURL(UsageEnvironment& env, char const* progName, char const* rtspURL) {
 }
 
 
-// Implementation of the RTSP 'response handlers':
+// Implementation of the RTSP 'response handlers':响应句柄
 
 void continueAfterDESCRIBE(RTSPClient* rtspClient, int resultCode, char* resultString) {
 	do {

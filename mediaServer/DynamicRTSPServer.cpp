@@ -71,6 +71,7 @@ ServerMediaSession* DynamicRTSPServer::lookupServerMediaSession(char const* stre
 		}
 
 		if (sms == NULL) {
+			//根据不同的文件类型，创建不同的server media session
 			sms = createNewSMS(envir(), streamName, fid);
 			addServerMediaSession(sms);
 		}

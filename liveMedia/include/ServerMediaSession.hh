@@ -121,7 +121,7 @@ class ServerMediaSubsession: public Medium {
 public:
   unsigned trackNumber() const { return fTrackNumber; }
   char const* trackId();
-  virtual char const* sdpLines() = 0;
+  virtual char const* sdpLines() = 0; //sdp信息的行数
   virtual void getStreamParameters(unsigned clientSessionId, // in
 				   netAddressBits clientAddress, // in
 				   Port const& clientRTPPort, // in
